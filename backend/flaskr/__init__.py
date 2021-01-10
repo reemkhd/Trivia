@@ -40,6 +40,7 @@ def create_app(test_config=None):
     #get all categories
     categories = Category.query.all()
     return jsonify({
+      'success': True,
       'categories': {category.id: category.type for category in categories}
     })
 
@@ -54,6 +55,7 @@ def create_app(test_config=None):
     #get all categories
     categories = Category.query.all()
     return jsonify({
+      'success': True,
       'questions': current_paging,
       'total_questions': len(questions),
       'categories': {category.id: category.type for category in categories}
@@ -75,6 +77,7 @@ def create_app(test_config=None):
     else:
       abort(404)
     return jsonify({
+      'success': True,
       'deleted': question_id
     })
     
@@ -94,6 +97,7 @@ def create_app(test_config=None):
     full_question = Question(question, answer, category, difficulty)
     full_question.insert()
     return jsonify({
+      'success': True,
       'question': full_question.format()
     })
 
@@ -107,6 +111,7 @@ def create_app(test_config=None):
     all_questions = Question.query.filter(Question.question.ilike("%" + search_term + "%")).all()
     questions = [question.format() for question in all_questions]
     return jsonify({
+      'success': True,
       'questions': questions,
       'total_questions': len(questions)
     })
@@ -119,6 +124,7 @@ def create_app(test_config=None):
     questions =  Question.query.filter(Question.category==category_id)
     current_pagination = pagination(request, questions)
     return jsonify({
+      'success': True,
       'questions': current_pagination,
       'total_questions': len(current_pagination)
     })
@@ -138,8 +144,9 @@ def create_app(test_config=None):
       #get the questions randomly
       question = random.choice(questions)
       return jsonify({
-        "question": question.format(),
-        "previousQuestions": []
+        'success': True,
+        'question': question.format(),
+        'previousQuestions': []
       })
     else:
       #if the user choose specific category, return just questions in same category & not repeat the previous questions
@@ -147,8 +154,9 @@ def create_app(test_config=None):
       #get the questions randomly
       question = random.choice(questions)      
       return jsonify({
-        "question": question.format(),
-        "previousQuestions": []
+        'success': True,
+        'question': question.format(),
+        'previousQuestions': []
       })    
 
 
