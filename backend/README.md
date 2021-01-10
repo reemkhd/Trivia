@@ -49,17 +49,6 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
-## Expected tasks
-
-1. Used Flask-CORS to enable cross-domain requests and set response headers. 
-2. Created an endpoint to handle GET requests for questions, including pagination (every 10 questions). This endpoint return a list of questions, number of total questions, current category, categories. 
-3. Created an endpoint to handle GET requests for all available categories. 
-4. Created an endpoint to DELETE question using a question ID. 
-5. Created an endpoint to POST a new question, which will require the question and answer text, category, and difficulty score. 
-6. Created a POST endpoint to get questions based on category. 
-7. Created a POST endpoint to get questions based on a search term.
-8. Created a POST endpoint to get questions to play the quiz.
-9. Created error handlers for all expected errors including 400, 404, 422, and 500. 
 
 REVIEW_COMMENT
 ```
