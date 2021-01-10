@@ -79,11 +79,13 @@ The API return 3 types of errors:
     "4": "History", 
     "5": "Entertainment", 
     "6": "Sports"
-  }
+  }, 
+  "success": true
 }
 ```
 
 ### GET/questions
+- GET requests for all questions.
 - Returns a list of questions with pagination (10 question per page), total number of questions, and categories.
 - Sample: ```curl http://127.0.0.1:5000/questions```
 ```
@@ -168,17 +170,20 @@ The API return 3 types of errors:
       "question": "How many paintings did Van Gogh sell in his lifetime?"
     }
   ], 
+  "success": true, 
   "total_questions": 16
 }
 ```
 
 ### DELETE/questions/{question_id}
-- Deletes the question of the given ID if it exists. Returns the id of the deleted question.
+- Deletes the question of the given ID if it exists. 
+- Returns the id of the deleted question.
 - Request arguments: int:question_id
 - Sample: ```curl -X DELETE http://127.0.0.1:5000/questions/60```
 ```
 {
-  "deleted": 60
+  "deleted": 64, 
+  "success": true
 }
 ```
 
@@ -196,7 +201,8 @@ The API return 3 types of errors:
     "difficulty": 1, 
     "id": 63, 
     "question": "What the color of orange"
-  }
+  },
+  "success": true
 }
 ```
 ### POST/questions/search
@@ -250,6 +256,7 @@ The API return 3 types of errors:
       "question": "What the color of orange"
     }
   ], 
+  "success": true,
   "total_questions": 6
 }
 ```
@@ -284,6 +291,7 @@ The API return 3 types of errors:
       "question": "Hematology is a branch of medicine involving the study of what?"
     }
   ], 
+  "success": true, 
   "total_questions": 3
 }
 ```
@@ -292,9 +300,14 @@ The API return 3 types of errors:
 - Get questions to play the quiz.
 - Return a random questions within the given category, if provided, and that is not one of the previous questions.
 - Request date: array:previous_questions, quiz_category: int:id
-- Sample: ```curl http://127.0.0.1:5000/quizzes```
 ```
-
+{
+  "answer": "Lake Victoria", 
+  "category": 3, 
+  "difficulty": 2, 
+  "id": 13, 
+  "question": "What is the largest lake in Africa?"
+}
 ```
 
 ## Testing
