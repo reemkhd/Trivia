@@ -18,5 +18,5 @@ The `./backend` directory contains a completed Flask and SQLAlchemy server. app.
 <a href="https://github.com/reemkhd/Trivia/blob/master/backend/README.md">View the README.md within ./backend for more details.</a>
 
 ### Frontend
-The `./frontend` directory contains a complete React frontend to consume the data from the Flask server.
+The `./frontend` directory contains a complete React frontend to consume the data from the Flask server.<br />
 [View the README.md within ./frontend for more details.](./frontend/README.md)
