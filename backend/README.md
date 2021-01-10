@@ -58,6 +58,10 @@ Errors as return in the followig format:
  "error": 400,
   message": "bad request"
 }
+
+```
+
+```
     
 Endpoints
 GET '/categories'
