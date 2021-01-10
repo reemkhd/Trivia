@@ -69,7 +69,7 @@ The API return 3 types of errors:
 ### GET/categories
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category.
 - Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs.
-- Sample: curl http://127.0.0.1:5000/categories
+- Sample: ```curl http://127.0.0.1:5000/categories```
 ```
 {
   "categories": {
