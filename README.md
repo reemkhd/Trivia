@@ -14,7 +14,8 @@ Completing this trivia app gave me the ability to structure plan, implement, and
 
 
 ### Backend
-The `./backend` directory contains a completed Flask and SQLAlchemy server. app.py defines the endpoints and reference models.py for DB and SQLAlchemy setup. 
+The `./backend` directory contains a completed Flask and SQLAlchemy server. app.py defines the endpoints and reference models.py for DB and SQLAlchemy setup.
+<a href="https://github.com/reemkhd/Trivia/blob/master/backend/README.md">View the README.md within ./backend for more details.</a>
 
 ### Frontend
 The `./frontend` directory contains a complete React frontend to consume the data from the Flask server.
