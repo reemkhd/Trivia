@@ -85,7 +85,7 @@ The API return 3 types of errors:
 
 ### GET/questions
 - Returns a list of questions with pagination (10 question per page), total number of questions, and categories.
-- Sample: curl http://127.0.0.1:5000/questions
+- Sample: ```curl http://127.0.0.1:5000/questions```
 ```
 {
   "categories": {
@@ -175,7 +175,7 @@ The API return 3 types of errors:
 ### DELETE/questions/{question_id}
 - Deletes the question of the given ID if it exists. Returns the id of the deleted question.
 - Request arguments: int:question_id
-- Sample: curl -X DELETE http://127.0.0.1:5000/questions/60
+- Sample: ```curl -X DELETE http://127.0.0.1:5000/questions/60```
 ```
 {
   "deleted": 60
@@ -187,7 +187,7 @@ The API return 3 types of errors:
 - Creates a new question using the submitted question, answer, catedory and difficulty score. 
 - Returns the created question.
 - Request date: [string:question, string:answer, string:category, int:difficulty]
-- Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question":"What the color of orange", "answer":"Orange", "category":5, "difficulty":1}'
+- Sample: ```curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question":"What the color of orange", "answer":"Orange", "category":5, "difficulty":1}'```
 ```
 {
   "question": {
@@ -203,7 +203,7 @@ The API return 3 types of errors:
 - Search for a question based on a search term.
 - Return any questions for whom the search term is a substring of the question.
 - Request date: string:searchTerm
-- Sample: curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm":"What"}'
+- Sample: ```curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm":"What"}'```
 ```
 {
   "questions": [
@@ -258,7 +258,7 @@ The API return 3 types of errors:
 - Get questions based on category.
 - Returns a list of questions with pagination (10 question per page) and total number of questions.
 - Request arguments: int:category_id
-- Sample: curl http://127.0.0.1:5000/categories/1/questions
+- Sample: ```curl http://127.0.0.1:5000/categories/1/questions```
 ```
 {
   "questions": [
@@ -292,7 +292,7 @@ The API return 3 types of errors:
 - Get questions to play the quiz.
 - Return a random questions within the given category, if provided, and that is not one of the previous questions.
 - Request date: array:previous_questions, quiz_category: int:id
-- Sample: curl http://127.0.0.1:5000/quizzes
+- Sample: ```curl http://127.0.0.1:5000/quizzes```
 ```
 
 ```
