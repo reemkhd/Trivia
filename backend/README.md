@@ -49,11 +49,16 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
+### Error Handling
+Errors as return in the followig format:
 
-REVIEW_COMMENT
 ```
-This README is missing documentation of your endpoints. Below is an example for your endpoint to get all categories. Please use it as a reference for creating your documentation and resubmit your code. 
-
+{
+ "success": False,
+ "error": 400,
+  message": "bad request"
+}
+    
 Endpoints
 GET '/categories'
 GET ...
