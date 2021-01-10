@@ -2,7 +2,7 @@
 
 ## Full Stack Trivia
 
-Since I'm a student at Udacity academy, I start to write the code for the trivia webpage.
+Since I'm a student at Udacity academy, I start to write the code for the trivia webpage.<br />
 In this webpage, you can:
 1) Display questions - both all questions and by category. Questions show the question, category and difficulty rating by default and can show/hide the answer. 
 2) Delete questions.
@@ -14,7 +14,7 @@ Completing this trivia app gave me the ability to structure plan, implement, and
 
 
 ### Backend
-The `./backend` directory contains a completed Flask and SQLAlchemy server. app.py defines the endpoints and reference models.py for DB and SQLAlchemy setup.
+The `./backend` directory contains a completed Flask and SQLAlchemy server. app.py defines the endpoints and reference models.py for DB and SQLAlchemy setup.<br />
 <a href="https://github.com/reemkhd/Trivia/blob/master/backend/README.md">View the README.md within ./backend for more details.</a>
 
 ### Frontend
