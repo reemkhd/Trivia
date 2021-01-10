@@ -302,12 +302,17 @@ The API return 3 types of errors:
 - Request date: array:previous_questions, quiz_category: int:id
 ```
 {
-  "answer": "Lake Victoria", 
-  "category": 3, 
-  "difficulty": 2, 
-  "id": 13, 
-  "question": "What is the largest lake in Africa?"
+  "question": 
+      {
+      "answer": "The Liver", 
+      "category": 1, 
+      "difficulty": 4, 
+      "id": 20, 
+      "question": "What is the heaviest organ in the human body?"
+    }, 
+  "success": true
 }
+  
 ```
 
 ## Testing
